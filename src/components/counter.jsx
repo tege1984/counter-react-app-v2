@@ -26,6 +26,7 @@ class Counter extends Component {
           <button
             onClick={() => onDecrement(counter)}
             className="btn btn-secondary btn-sm m-2"
+            disabled={this.isDecrementButtonDisabled()}
           >
             -
           </button>
@@ -38,6 +39,10 @@ class Counter extends Component {
         </div>
       </div>
     );
+  }
+
+  isDecrementButtonDisabled() {
+    return this.props.counter.value === 0 ? true : false;
   }
 
   getBadgeClasses() {
