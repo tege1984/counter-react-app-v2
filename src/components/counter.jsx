@@ -16,10 +16,10 @@ class Counter extends Component {
         <div className="col-1">
           <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         </div>
-        <div className="col-3">
+        <div className="col">
           <button
             onClick={() => onIncrement(counter)}
-            className="btn btn-secondary btn-sm m-2"
+            className="btn btn-secondary btn-sm"
           >
             +
           </button>
@@ -32,7 +32,7 @@ class Counter extends Component {
           </button>
           <button
             onClick={() => onDelete(counter.id)}
-            className="btn btn-danger btn-sm m-2"
+            className="btn btn-danger btn-sm"
           >
             x
           </button>
